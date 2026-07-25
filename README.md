@@ -1,24 +1,33 @@
-Credit Card Default Prediction using ANN
+Credit Card Default Prediction using Artificial Neural Network
+<p align="center"> <b>End-to-End Machine Learning Application for Credit Risk Prediction</b> </p>
 
-An end-to-end Machine Learning project that predicts the probability of credit card payment default using customer demographic, credit, billing, and repayment behavior.
 
-The project uses an Artificial Neural Network (ANN) for prediction and provides an interactive Streamlit web application where users can enter customer details and receive a default probability and risk classification.
 
-🎯 Key Features
-Predicts the probability of credit card payment default
-Uses customer credit, demographic, billing, and repayment information
-Feature engineering using average billing, average payment, and repayment delay
-Categorical encoding and numerical feature scaling
-Artificial Neural Network built using TensorFlow/Keras
-Probability-based prediction with Low, Medium, and High risk classification
-Interactive Streamlit interface
-Deployed using Streamlit Community Cloud
-🧠 Machine Learning Workflow
 
-Data → Preprocessing → Feature Engineering → ANN → Probability Prediction → Risk Classification
 
-The model uses features such as:
 
+
+
+Project Overview
+
+Credit card default prediction is an important financial risk problem where identifying customers likely to default can support better-informed credit decisions.
+
+This project develops an Artificial Neural Network (ANN) to predict the probability of a customer's next-month credit card payment default using demographic, credit, billing, and repayment behavior.
+
+The trained model is integrated into an interactive Streamlit application, allowing users to enter customer information and receive a default probability and risk classification.
+
+Objectives
+Predict the probability of credit card payment default.
+Engineer meaningful features from billing and repayment behavior.
+Apply appropriate encoding and scaling to model inputs.
+Train and evaluate an Artificial Neural Network.
+Provide probability-based Low, Medium, and High Risk classification.
+Build and deploy an interactive machine learning application.
+Machine Learning Workflow
+
+Data → Feature Engineering → Encoding → Scaling → ANN → Default Probability → Risk Classification
+
+Key Features
 Credit Limit
 Age
 Education
@@ -27,38 +36,45 @@ Average Billing Amount
 Average Payment Amount
 Recent Repayment Status
 Maximum Repayment Delay
-
-The preprocessing pipeline is preserved using saved encoder and scaler files to ensure that application inputs are processed consistently with the training data.
-
-🛠️ Tech Stack
-Category	Technologies
-Language	Python
-Machine Learning	TensorFlow, Keras, Scikit-learn
+Model & Technology Stack
+Component	Technology
+Programming	Python 3.11
+Model	Artificial Neural Network
+Deep Learning	TensorFlow / Keras
+Preprocessing	Scikit-learn
 Data Processing	Pandas, NumPy
 Model Persistence	Joblib, Keras
 Web Application	Streamlit
 Deployment	Streamlit Community Cloud
-Development	Jupyter Notebook, GitHub
-📂 Project Structure
+Application
 
-app1.py — Streamlit application and prediction interface
-credit_default_ann_v2.keras — Trained ANN model
-encoder_v2.pkl — Saved categorical encoder
-scaler_v2.pkl — Saved feature scaler
-requirements.txt — Project dependencies
-Credit_Card_Default_Prediction.ipynb — Model development and training notebook
-🌐 Live Demo
+The Streamlit application provides a simple interface for entering customer information and generating predictions.
 
-Streamlit App:
-[Add your deployed Streamlit URL here]
+Output
 
-📊 Output
+Default Probability
+Estimated probability of the customer defaulting on their next payment.
 
-The application provides:
+Risk Classification
+🟢 Low Risk
+🟡 Medium Risk
+🔴 High Risk
 
-Default Probability — Estimated likelihood of the customer defaulting on their next payment.
+Deployment
 
-Risk Level — Categorizes the prediction into:
+The application is deployed using Streamlit Community Cloud, making the trained model accessible through a web browser without requiring a local machine learning environment.
+
+🔗 Live Demo
+https://creditcarddefaults.streamlit.app/
+Future Improvements
+Improve risk-threshold calibration.
+Hyperparameter tuning and model optimization.
+SHAP-based model explainability.
+Improved handling of class imbalance.
+Prediction history and analytics.
+Enhanced model monitoring and production deployment.
+
+
 
 🟢 Low Risk
 🟡 Medium Risk
