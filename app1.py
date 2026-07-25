@@ -80,10 +80,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(
-    "<div class='subtitle'>Artificial Neural Network based Credit Risk Assessment System</div>",
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     "<div class='subtitle'>Artificial Neural Network based Credit Risk Assessment System</div>",
+#     unsafe_allow_html=True
+# )
 
 st.write("")
 
@@ -94,17 +94,17 @@ st.write("")
 st.sidebar.header("Model Information")
 
 st.sidebar.info(
-"""
-Model : Artificial Neural Network
+# """
+# Model : Artificial Neural Network
 
-Input Features : 9
+# Input Features : 9
 
-Dataset :
-Taiwan Credit Card Default Dataset
+# Dataset :
+# Taiwan Credit Card Default Dataset
 
-Framework :
-TensorFlow + Streamlit
-"""
+# Framework :
+# TensorFlow + Streamlit
+# """
 )
 
 # ==========================================================
@@ -674,86 +674,86 @@ if predict:
     # MODEL INFORMATION
     # ==========================================================
 
-    with st.expander("Model Details"):
+#     with st.expander("Model Details"):
 
-        st.markdown("""
-### Model Information
+#         st.markdown("""
+# ### Model Information
 
-**Model**
-- Artificial Neural Network (ANN)
+# **Model**
+# - Artificial Neural Network (ANN)
 
-**Dataset**
-- Taiwan Credit Card Default Dataset
+# **Dataset**
+# - Taiwan Credit Card Default Dataset
 
-**Input Features**
-1. Credit Limit
-2. Age
-3. Gender
-4. Education
-5. Marital Status
-6. Average Monthly Bill
-7. Average Monthly Payment
-8. Current Repayment Status (PAY_0)
-9. Maximum Delay
+# **Input Features**
+# 1. Credit Limit
+# 2. Age
+# 3. Gender
+# 4. Education
+# 5. Marital Status
+# 6. Average Monthly Bill
+# 7. Average Monthly Payment
+# 8. Current Repayment Status (PAY_0)
+# 9. Maximum Delay
 
-**Evaluation Metrics**
+# **Evaluation Metrics**
 
-- Accuracy : **81.53%**
-- Precision : **65.19%**
-- Recall : **67.25%**
-- F1 Score : **66.21%**
-- ROC-AUC : **87.67%**
+# - Accuracy : **81.53%**
+# - Precision : **65.19%**
+# - Recall : **67.25%**
+# - F1 Score : **66.21%**
+# - ROC-AUC : **87.67%**
 
-The model predicts the probability that a customer will default on the next month's credit card payment.
-        """)
+# The model predicts the probability that a customer will default on the next month's credit card payment.
+#         """)
 
-    # ==========================================================
-    # DOWNLOAD REPORT
-    # ==========================================================
+#     # ==========================================================
+#     # DOWNLOAD REPORT
+#     # ==========================================================
 
-    report = pd.DataFrame({
+#     report = pd.DataFrame({
 
-        "Customer Name":[customer_name],
+#         "Customer Name":[customer_name],
 
-        "Age":[age],
+#         "Age":[age],
 
-        "Gender":[gender],
+#         "Gender":[gender],
 
-        "Education":[education],
+#         "Education":[education],
 
-        "Marital Status":[marriage],
+#         "Marital Status":[marriage],
 
-        "Credit Limit":[credit_limit],
+#         "Credit Limit":[credit_limit],
 
-        "Average Bill":[avg_bill],
+#         "Average Bill":[avg_bill],
 
-        "Average Payment":[avg_payment],
+#         "Average Payment":[avg_payment],
 
-        "PAY_0":[pay_status],
+#         "PAY_0":[pay_status],
 
-        "Maximum Delay":[max_delay],
+#         "Maximum Delay":[max_delay],
 
-        "Probability of Default":[round(probability*100,2)],
+#         "Probability of Default":[round(probability*100,2)],
 
-        "Risk Level":[risk],
+#         "Risk Level":[risk],
 
-        "Recommendation":[recommendation]
+#         "Recommendation":[recommendation]
 
-    })
+#     })
 
-    csv = report.to_csv(index=False)
+#     csv = report.to_csv(index=False)
 
-    st.download_button(
+#     st.download_button(
 
-        label="Download Prediction Report",
+#         label="Download Prediction Report",
 
-        data=csv,
+#         data=csv,
 
-        file_name="credit_default_prediction.csv",
+#         file_name="credit_default_prediction.csv",
 
-        mime="text/csv"
+#         mime="text/csv"
 
-    )
+#     )
 
     # ==========================================================
     # FOOTER
