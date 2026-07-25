@@ -1,4 +1,4 @@
-Credit Card Default Prediction Using ANN
+Credit Card Default Prediction using ANN
 
 An end-to-end Machine Learning project that predicts the probability of credit card payment default using customer demographic, credit, billing, and repayment behavior.
 
