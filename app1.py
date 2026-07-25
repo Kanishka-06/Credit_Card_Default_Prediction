@@ -94,17 +94,17 @@ st.write("")
 st.sidebar.header("Model Information")
 
 st.sidebar.info(
-# """
-# Model : Artificial Neural Network
+"""
+Model : Artificial Neural Network
 
-# Input Features : 9
+Input Features : 9
 
-# Dataset :
-# Taiwan Credit Card Default Dataset
+Dataset :
+Taiwan Credit Card Default Dataset
 
-# Framework :
-# TensorFlow + Streamlit
-# """
+Framework :
+TensorFlow + Streamlit
+"""
 )
 
 # ==========================================================
